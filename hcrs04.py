@@ -24,7 +24,7 @@ class HCRS04 () :
         print(delta)
         sig = Pin(self.Pin_echo, Pin.IN)
         t = time_pulse_us(sig, 1, 23000)  # timeout pour 4m  = 2 * 11700
-        dist_mm = 340000 * t // 2000000  #en cm (aller-retour)
+        dist_mm = 340000 * t // 2000000  #en mm 
         utime.sleep_ms(60) #temps mini entre 2 mesures  (60ms)
         return dist_mm
     
